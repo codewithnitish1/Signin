@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/c55419a886.js" crossorigin="anonymous"></script>
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+    <form action="a">
+      <h1>Create Accounts</h1>
+      <div class="social-container">
+        <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+        <a href=""><i class="fa-light fa-code-compare"></i></a>
+        <a href=""><i class="fa-solid fa-user"></i></a>
+        <a href=""><i class="fa-solid fa-user"></i></a>
+        <a href=""><i class="fa-solid fa-key"></i></a>
+      </div>
+      <span>Or use your email for registration</span>
+      <div class="infield">
+        <input type="text" placeholder="Name">
+        <label></label>
+      </div>
+      <div class="infield">
+        <input type="text" placeholder="Email" name="Enail">
+        <label></label>
+      </div>
+      <div class="infield">
+        <input type="password" placeholder="Password">
+        <label></label>
+      </div>
+      <button>Sign-up</button>
+    </form>
+  </div>
+  <div class="form-container sign-in-container">    
+  <form action="a">
+      <h1>Sign-In</h1>
+      <div class="social-container">
+        <a href=""><i class="fa-solid fa-key"></i></a>
+        <a href=""><i class="fa-solid fa-key"></i></a>
+        <a href=""><i class="fa-solid fa-user"></i></a>
+       <a href=""> <i class="fa-solid fa-user"></i></a>
+        <a href=""><i class="fa-solid fa-key"></i></a>
+      </div>
+      <span>Or use your Accounts</span>
+      <div class="infield">
+        <input type="text" placeholder="Email" name="enail">
+        <label></label>
+      </div>
+      <div class="infield">
+        <input type="password" placeholder="Password">
+        <label></label>
+      </div>
+      <a class="forget" href="a">Forget Your Password</a>
+      <button>Sign-in</button>
+    </form>
+</div>
+<div class="overlay-container" id="overlaycon">
+  <div class="overlay">
+    <div class="overlay-panel overlay-left" >
+      <h1>Welcome Back</h1>
+      <p> To keep connected with us please login with your personal info</p>
+      <button>Sign-in</button>
+    </div>
+    <div class="overlay-panel overlay-right">
+      <h1>Hello, Friends!</h1>
+      <p>Enter your personal details and start journey with us</p>
+      <button>Sign-up</button>
+    </div>
+  </div>
+  <button id="overlayBtn"></button>
+</div>
+</div>
+  <!-- Project -->
+  <script>
+    const container = document.getElementById('container');
+    const overlaycon = document.getElementById('overlaycon');
+    const overlaybtn = document.getElementById('overlayBtn');
+    
+    overlaybtn.addEventListener('click',() =>{
+      container.classList.toggle('right-panel-active');
+    })
+    overlaybtn.classList.remove('btnscaled');
+    window.requestAnimationFrame(()=> {
+      overlaybtn.classList.add('btnscaled');
+    })
+  </script>
+</body>
+</html>
